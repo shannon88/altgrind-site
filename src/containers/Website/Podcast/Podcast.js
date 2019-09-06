@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Podcast.css';
+import styles from './Podcast.module.css';
 
-const podcast = () => {
+const Podcast = () => {
     return (
         <div className={styles.podcast}>
             <h3>Peep the Pod</h3>
@@ -9,4 +9,4 @@ const podcast = () => {
     )
 };
 
-export default podcast;
+export default Podcast;

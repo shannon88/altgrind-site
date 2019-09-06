@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header'
-import Home from './containers/Website/Home/Home'
-import About from './containers/Website/About/About'
-import Footer from './components/Footer'
-import Podcast from './containers/Website/Podcast/Podcast'
+import Website from './containers/Website/Website'
 import {BrowserRouter} from 'react-router-dom'
 
 class App extends Component {
@@ -12,12 +8,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <div className="header"><Header/></div>
-          <img className="bannerImage"src={require("./pages/images/nyc-skyline.jpg")} alt="NYC Skyline"/>
-          <div className="home"><Home/></div>
-          <div className="about"><About/></div>
-          <div className="podcast"><Podcast/></div>
-          <div className="footer"><Footer/></div>
+          <Website/>
         </div>
       </BrowserRouter>
   );
