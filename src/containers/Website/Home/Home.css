@@ -1,0 +1,18 @@
+.home {
+  background-color: red;
+  opacity: .75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Place text in the middle of the image */
+.bannerText {
+  font-size: 1.5rem;
+  padding: 3.5rem;
+  /*position: absolute;
+  transform: translate(-50%, -50%);*/
+  color: black;
+  z-index: 2;
+}

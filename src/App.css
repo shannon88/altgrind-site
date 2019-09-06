@@ -1,15 +1,69 @@
-/*.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-rows: 50px 300px 300px 300px 300px 300px 50px;
-
-} */
-
 .app {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-rows: 5rem 1fr 1fr 1fr .5fr 1fr .5fr 5rem;*/
+  grid-template-rows: 5rem 20rem 1fr 1fr 5rem;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-areas:  "header header header"
+                        "home home home"
+                        "about about about"
+                        "podcast podcast podcast"
+                        "footer footer footer";
+
 }
+
+.header {
+  grid-area: header;
+  z-index:2;
+}
+
+  .bannerImage {
+    grid-row-start: header-start;
+    grid-row-end: home-end;
+    grid-column-start: header-start;
+    grid-column-end: header-end;
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    /*background-image: radial-gradient(black, white);*/
+    background-image: url(./pages/images/nyc-skyline.jpg);
+  
+    /* Set a specific height */
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+
+.home {
+  grid-area: home;
+  z-index: 2;
+}
+
+.about {
+  grid-area: about;
+}
+
+.podcast {
+  grid-area: podcast;
+  background-color:lightblue;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: pink;
+}
+
+
+
+
+
+
 
 @media 

@@ -11,8 +11,7 @@ const about = () => {
                 standard 9-5 jobs most of us get after graduating. Only a few weeks into working, I
                  realized just how structured and restricted my time had become and frankly wasn’t happy about it. 
                  I started dreading Mondays, counting down every hour at the office and ultimately decided it was 
-                 time for a change.<br/><br/></p>
-            <p>As a tech and coding enthusiast, I’m currently exploring alternatives to standard 
+                 time for a change.<br/><br/>As a tech and coding enthusiast, I’m currently exploring alternatives to standard 
                  white collar work. I began my tech journey by teaching myself javascript, building this website and 
                  starting the altgrind podcast. Give a listen and join me as I try to find work that’s actually worth doing! 
                  Keep grinding.</p>
