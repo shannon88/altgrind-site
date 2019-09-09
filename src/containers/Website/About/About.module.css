@@ -1,17 +1,19 @@
 .about {
     /*width: 100%;*/
-    background-color: orange;
-    opacity: .75;
     display: flex; /*why does this solve gutter problem*/
     flex-direction: column;
     align-items: center;
 }
 
-.about h3 {
-    padding: 3.5rem;
-    font-size: 1.5rem;
-    line-height: 1.75;
+.about h1 {
+    padding-top: 8rem;
+    padding-bottom: 3.5rem;
+    font-size: 2rem;
+    
+    max-width: 75%;
     color: hsl(180, 80%, 35%);
+    color: #102027;
+    color: #26a69a;
 }
 
 .about img {
@@ -23,9 +25,9 @@
 .about p {
     /*display: inline-block;*/
     padding: 3.5rem;
-    color: black;
     max-width: 75%;
-    line-height: 1.25;
-    color: hsl(199, 25%, 40%);
+    line-height: 1.2;
+    color: #37474f;
     font-weight: 600;
+    text-align: justify;
 }

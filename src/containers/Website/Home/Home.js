@@ -1,17 +1,23 @@
 import React from 'react';
 import styles from './Home.module.css';
+/*import Button from 'react-bootstrap/Button';
+import Button from '../main.css'*/
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
-const home = () => {
+const Home = () => {
     return (
-        <div className={styles.home}>
-            <div className={styles.banner}>
+        <div className={styles.home}>   
+            <div className={styles.bannerImage}>
+                <img src={require("./images/nyc-skyline.jpg")} alt="NYC Skyline"/>       
                 <div className={styles.bannerText}>
-                    <h2>Quit your day job and explore <br/> tech alternatives with me.</h2>
-                    <button>Listen up!</button>
+                    <h1>Quit your day job and explore tech alternatives with me.</h1>
+                    {/*<div className={styles.bootstrapIso}><Button variant="outline-dark">Dark</Button></div>*/}
+                    <Button variant="contained" color="primary"><Link to="/podcast" className={styles.button}>podcast</Link></Button>
                 </div>
             </div>
-        </div>
+        </div> 
     )
 };
 
-export default home;
+export default Home;

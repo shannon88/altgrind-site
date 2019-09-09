@@ -1,19 +1,37 @@
-.home {
-  background-color: red;
-  opacity: .75;
+.home img {
+  /*opacity: .66;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;*/
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  opacity: .66;
+  height: 100%;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
-/* Place text in the middle of the image */
 .bannerText {
-  font-size: 1.5rem;
-  padding: 3.5rem;
-  /*position: absolute;
-  transform: translate(-50%, -50%);*/
-  color: black;
-  z-index: 2;
+  position: absolute;  
+  left: 50%;                        /* horizontal alignment */
+  top: 50%;                         /* vertical alignment */
+  transform: translate(-50%, -50%); /* precise centering; see link below */
+  /*color: hsl(199, 25%, 20%);*/
+  color: #102027;
+  font-size: 1.2rem;
+}
+
+.button {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:white;
+  text-transform: lowercase;
 }

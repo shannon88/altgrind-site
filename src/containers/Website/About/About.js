@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './About.module.css';
 
-const about = () => {
+const About = () => {
     return (
         <div className={styles.about}>
-            <h3>Hi, I'm Shannon O'Hehir. A New York City-based <br/> podcaster, tech enthusiast and side hustler.</h3>
+            <h1>Hi, I'm Shannon O'Hehir. A New York City-based podcaster, tech enthusiast and side hustler.</h1>
             <img src={require("./images/about-me-500x500.jpg")} alt="Shannon"/>
             <p>I used to work a design job at a respectable firm in New York City. 
                 I hustled to get work in the industry I went to college for and didn’t question the 
@@ -19,4 +19,4 @@ const about = () => {
     )
 };
 
-export default about;
+export default About;
