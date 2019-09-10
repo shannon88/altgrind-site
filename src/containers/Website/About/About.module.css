@@ -1,6 +1,5 @@
 .about {
-    /*width: 100%;*/
-    display: flex; /*why does this solve gutter problem*/
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -9,10 +8,7 @@
     padding-top: 8rem;
     padding-bottom: 3.5rem;
     font-size: 2rem;
-    
     max-width: 75%;
-    color: hsl(180, 80%, 35%);
-    color: #102027;
     color: #26a69a;
 }
 

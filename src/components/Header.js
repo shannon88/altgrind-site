@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 
-const header = () => {
+const Header = () => {
     return (
         <header className={styles.header}>
                 <h1><Link to="/" className={styles.title}>altgrind</Link></h1>
@@ -18,4 +18,4 @@ const header = () => {
     )
 };
 
-export default header;
+export default Header;
