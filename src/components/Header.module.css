@@ -24,11 +24,11 @@
     /*padding: 1rem 2rem;*/
     line-height: 2rem;
     padding-left: 2rem;
+    letter-spacing: .1rem;
 }
 
 .title:hover {
     /* do cool motion here with logo*/
-    color: #26a69a;
 }
 
 .navList {

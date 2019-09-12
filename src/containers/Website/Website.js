@@ -23,11 +23,11 @@ class Website extends Component {
           <div className="header"><Header/></div>
           {/*<Route path="/" exact render={()=> <div className="home"><Home/></div>} />*/}
           {/*<Route exact path="/" component={Home} />*/}
-          {/*<div className="home"><Route exact path="/" component={Home}/></div>*/}
-          <div className="about"><Route exact path="/about" component={About}/></div>
-          <div className="podcast"><Route path="/podcast" component={Podcast}/></div>
-          <div className="projects"><Route path="/projects" component={Projects}/></div>
-          <div className="contact"><Route path="/contact" component={Contact}/></div>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/about" component={About}/>
+          <Route path="/podcast" component={Podcast}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/contact" component={Contact}/>
           <div className="footer"><Footer/></div>
         </div>
       </MuiThemeProvider>
