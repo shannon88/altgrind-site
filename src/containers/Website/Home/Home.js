@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className={styles.home}>   
             <div className={styles.bannerImage}>
-                <img src={require("./images/nyc-skyline.jpg")} alt="NYC Skyline"/>       
+                <img src={require("./images/newyorkcity-skyline.jpg")} alt="NYC Skyline"/>       
                 <div className={styles.bannerText}>
                     <h1>Quit your day job and explore tech alternatives with me.</h1>
                     {/*<div className={styles.bootstrapIso}><Button variant="outline-dark">Dark</Button></div>*/}
