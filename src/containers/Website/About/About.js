@@ -4,8 +4,8 @@ import styles from './About.module.css';
 const About = () => {
     return (
         <div className={styles.about}>
-            <h1>Hi, I'm Shannon O'Hehir. A New York City-based podcaster, tech enthusiast and side hustler.</h1>
-            <img src={require("./images/about-me-new.jpg")} alt="Shannon"/>
+            <h1>Hi, I'm Shannon O'Hehir. A New York City-based software developer, tech enthusiast and podcaster.</h1>
+            <img src={require("./images/about-me-new-compress.jpg")} alt="Shannon"/>
             <p>I used to work a design job at a respectable firm in New York City. 
                 I hustled to get work in the industry I went to college for and didn’t question the 
                 standard 9-5 jobs most of us get after graduating. Only a few weeks into working, I
