@@ -1,0 +1,14 @@
+.epPage {
+    margin-top: 4rem;
+    height: 100vh;
+}
+
+.epNum {
+    font-size: 6rem;
+    /* font-weight: 800; */
+    color: pink;
+}
+
+.title {
+    margin-top: 2rem;
+}

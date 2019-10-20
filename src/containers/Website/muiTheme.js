@@ -2,7 +2,21 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {
-    useNextVariants: true,
+    // useNextVariants: true,
+    fontFamily: "\"Montserrat\", sans-serif",
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 600,
+    },
+    h2: {
+      fontSize: '2rem',
+      fontWeight: 700,
+    },
+    body1: {
+      fontweight: 800,
+    }
+
+
   },
   palette: {
     primary: {
@@ -19,22 +33,3 @@ const theme = createMuiTheme({
 });
 
 export default theme;
-
-
-
-/*import { createMuiTheme } from "@material-ui/core/styles";
-
-export default createMuiTheme({
-  overrides: {
-    MuiButton: {
-      root: {
-        fontWeight: "bold",
-        backgroundColor: "red",
-        margin: "10px",
-        "&:hover": {
-          backgroundColor: "green"
-        }
-      }
-    }
-  }
-});*/

@@ -1,0 +1,11 @@
+.intro {
+    margin-left: 1rem;
+}
+
+.introP {
+    text-align: justify;
+    max-width: 80%;
+    color: #62727b;
+    /* color: #37474f; */
+    font-weight: 600;
+}
