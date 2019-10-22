@@ -70,21 +70,23 @@ class PodcastPage extends Component {
           </Grid>
           <Grid item md>
             <Grid container align="center" justify="center">
-              <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-              {this.state.episodes &&
-                this.state.episodes.map(tidbits => (
-                  <div>
-                    <Episode
-                      key={tidbits.id}
-                      episodeNum={tidbits.episodeNum}
-                      title={tidbits.title}
-                      pubDate={tidbits.pubDate}
-                      duration={tidbits.duration}
-                      summary={tidbits.summary}
-                      audioLink={tidbits.audioLink}
-                    />
-                  </div>
-                ))}
+              <Grid item md>
+                <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+                {this.state.episodes &&
+                  this.state.episodes.map(tidbits => (
+                    <div>
+                      <Episode
+                        key={tidbits.id}
+                        episodeNum={tidbits.episodeNum}
+                        title={tidbits.title}
+                        pubDate={tidbits.pubDate}
+                        duration={tidbits.duration}
+                        summary={tidbits.summary}
+                        audioLink={tidbits.audioLink}
+                      />
+                    </div>
+                  ))}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

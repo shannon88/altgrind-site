@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 300,
+    minWidth: 300, //change to 250 jk, change to percentage not px 
     maxWidth: 600,
     // width: 600, 
     marginBottom: '1rem',
@@ -105,8 +105,7 @@ const Episode = (props) => {
 
   return (
       // <Card>{data.title}</Card>
-      <div>
-        
+      <div>  
         <Card className={classes.card}>
         <Box display="flex" justifyContent="space-between">
           <Typography className={classes.epNum} variant="h2" color="primary" justifyContent="center">

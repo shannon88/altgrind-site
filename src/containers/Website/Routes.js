@@ -9,18 +9,24 @@ import EpisodePage from "./Podcast/EpisodePage";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ScrollToTop from "./ScrollToTop";
+// import Container from '@material-ui/core/Container';
+// import Grid from "@material-ui/core/Grid";
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Header />
       <ScrollToTop />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/podcast" component={Podcasts} />
-      <Route path="/episode" component={EpisodePage} />
-      <Route exact path="/projects" component={Projects} />
-      <Route exact path="/contact" component={Contact} />
+      {/* <Container> */}
+      {/* <Grid container> */}
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/podcast" component={Podcasts} />
+        <Route path="/episode" component={EpisodePage} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+      {/* </Grid> */}
+      {/* </Container> */}
       <Footer />
     </BrowserRouter>
   );
