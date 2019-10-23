@@ -3,6 +3,9 @@ import Episode from "./Episode";
 import Grid from "@material-ui/core/Grid";
 import PodcastIntro from "./PodcastIntro";
 import styles from "./PodcastPage.module.css";
+import History from "../History";
+
+History.push('/podcast');
 
 class PodcastPage extends Component {
   constructor(props) {
