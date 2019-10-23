@@ -1,7 +1,7 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+import { browserRouter, Route } from "react-router-dom";
 // import { BrowserHistory } from 'react-router';
-import history from './History'
+// import history from './History'
 import Home from "./Home/Home";
 import About from "./About/About";
 import Podcasts from "./Podcast/PodcastPage";
@@ -17,7 +17,7 @@ import ScrollToTop from "./ScrollToTop";
 
 const Routes = () => {
   return (
-    <Router history={history}>
+    <browserRouter>
     {/* <BrowserRouter> */}
       <Header />
       <ScrollToTop />
@@ -33,7 +33,7 @@ const Routes = () => {
       {/* </Container> */}
       <Footer />
     {/* </BrowserRouter> */}
-    </Router>
+    </browserRouter>
   );
 };
 

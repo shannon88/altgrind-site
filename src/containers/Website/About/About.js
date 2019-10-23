@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './About.module.css';
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import History from "../History";
+// import History from "../History";
 
-History.push('/about');
+// History.push('/about');
 
 const useStyles = makeStyles({
     hi: {

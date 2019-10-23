@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import Typography from "@material-ui/core/Typography";
-import History from "../History";
+// import History from "../History";
 
-History.push('/projects');
+// History.push('/projects');
 
 const Projects = () => {
     return (

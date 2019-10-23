@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Contact.module.css';
 import SocialFollow from '../../../components/SocialFollow'
 import Typography from "@material-ui/core/Typography";
-import History from "../History";
+// import History from "../History";
 
-History.push('/contact');
+// History.push('/contact');
 
 const Contact = () => {
     return (
