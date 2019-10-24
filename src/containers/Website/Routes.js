@@ -23,7 +23,7 @@ const Routes = () => {
       <ScrollToTop />
       {/* <Container> */}
       {/* <Grid container> */}
-        <Route exact path="/" component={Home} />
+        <Route path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/podcast" component={Podcasts} />
         <Route exact path="/episode" component={EpisodePage} />
