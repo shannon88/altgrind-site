@@ -1,5 +1,6 @@
 import React from "react";
-import { browserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import { createBrowserHistory } from 'history'
 // import { BrowserHistory } from 'react-router';
 // import history from './History'
 import Home from "./Home/Home";
@@ -13,11 +14,11 @@ import Footer from "../../components/Footer";
 import ScrollToTop from "./ScrollToTop";
 // import Container from '@material-ui/core/Container';
 // import Grid from "@material-ui/core/Grid";
-
+const history = createBrowserHistory()
 
 const Routes = () => {
   return (
-    <browserRouter>
+    <Router history={history}>
     {/* <BrowserRouter> */}
       <Header />
       <ScrollToTop />
@@ -33,7 +34,7 @@ const Routes = () => {
       {/* </Container> */}
       <Footer />
     {/* </BrowserRouter> */}
-    </browserRouter>
+    </Router>
   );
 };
 
