@@ -18,12 +18,11 @@ import ScrollToTop from "./ScrollToTop";
 
 const Routes = () => {
   return (
-    <BrowserRouter>
-      <Header />
+    <div>
       <ScrollToTop />
       {/* <Container> */}
       {/* <Grid container> */}
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/podcast" component={Podcasts} />
         <Route exact path="/episode" component={EpisodePage} />
@@ -31,8 +30,7 @@ const Routes = () => {
         <Route exact path="/contact" component={Contact} />
       {/* </Grid> */}
       {/* </Container> */}
-      <Footer />
-    </BrowserRouter>
+      </div>
   );
 };
 
