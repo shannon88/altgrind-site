@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
-// import { createBrowserHistory } from 'history'
-import { BrowserRouter } from 'react-router-dom';
+// // import { createBrowserHistory } from 'history'
+// import { BrowserRouter } from 'react-router-dom';
 // import history from './History'
 import Home from "./Home/Home";
 import About from "./About/About";
