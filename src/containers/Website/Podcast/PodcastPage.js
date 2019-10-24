@@ -3,10 +3,6 @@ import Episode from "./Episode";
 import Grid from "@material-ui/core/Grid";
 import PodcastIntro from "./PodcastIntro";
 import styles from "./PodcastPage.module.css";
-import { withRouter } from "react-router-dom"
-// import History from "../History";
-
-// History.push('/podcast');
 
 class PodcastPage extends Component {
   constructor(props) {
@@ -101,4 +97,4 @@ class PodcastPage extends Component {
   }
 }
 
-export default withRouter(PodcastPage);
+export default PodcastPage;
