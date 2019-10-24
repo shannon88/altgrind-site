@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Website.css";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
@@ -7,9 +7,7 @@ import theme from "./muiTheme";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-class Website extends Component {
-  render() {
-    return (
+const Website = () => 
       <MuiThemeProvider theme={theme}>
         <div className="website">
           <BrowserRouter>
@@ -19,8 +17,6 @@ class Website extends Component {
           <Footer />
         </div>
       </MuiThemeProvider>
-    );
-  }
-}
+      
 
 export default Website;
