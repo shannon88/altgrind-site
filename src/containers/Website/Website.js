@@ -7,16 +7,16 @@ import theme from "./muiTheme";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const Website = () => 
-      <MuiThemeProvider theme={theme}>
-        <div className="website">
-          <BrowserRouter>
-            <Header />
-            <Routes />
-          </BrowserRouter>
-          <Footer />
-        </div>
-      </MuiThemeProvider>
-      
+const Website = () => (
+  <BrowserRouter>
+    <MuiThemeProvider theme={theme}>
+      <div className="website">
+        <Header />
+        <Routes />
+        <Footer />
+      </div>
+    </MuiThemeProvider>
+  </BrowserRouter>
+);
 
 export default Website;

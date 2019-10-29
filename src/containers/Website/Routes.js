@@ -22,12 +22,12 @@ const Routes = () => {
       <ScrollToTop />
       {/* <Container> */}
       {/* <Grid container> */}
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/podcast" component={Podcasts} />
-        <Route exact path="/episode" component={EpisodePage} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/about" component={About} />
+        <Route path="/podcast" component={Podcasts} />
+        <Route path="/episode" component={EpisodePage} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
       {/* </Grid> */}
       {/* </Container> */}
       </div>
