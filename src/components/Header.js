@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <div>
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar className={classes.appBar} position="fixed">
         <Toolbar>
         <Box display={{ xs: 'block', md: 'none' }}>
           <NavMenu/>

@@ -1,11 +1,13 @@
-.bannerText {
+/* .bannerText {
   position: absolute;  
   left: 50%;                    
   top: 50%;                         
   transform: translate(-50%, -50%); 
   color: #102027;
   font-size: 1.2rem;
-}
+} */
+
+
 
 .button {
   text-decoration: none;
