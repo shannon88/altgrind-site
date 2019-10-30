@@ -1,9 +1,12 @@
-    
+    /* .container {
+      min-width: 800px;
+    } */
     
     a.social {
       margin: 0 1rem;
       transition: transform 250ms;
       display: inline-block;
+      /* do media query for spacing of these, maybe use materialUI grid */
     }
     
     a.social:hover {

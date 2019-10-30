@@ -1,14 +1,11 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import Typography from "@material-ui/core/Typography";
-// import History from "../History";
-
-// History.push('/projects');
 
 const Projects = () => {
     return (
         <div className={styles.projects}>
-            <Typography variant="h2" color="primary">Projects coming soon!</Typography>
+            <Typography className={styles.heading} variant="h2" color="primary">Projects coming soon!</Typography>
         </div>
     )
 };
