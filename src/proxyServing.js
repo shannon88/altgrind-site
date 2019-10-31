@@ -1,23 +1,25 @@
-var express = require('express');
-// Import the library:
-var cors = require('cors');
+const express = require('express');
+const request = require('request');
 
-var app = express();
+const app = express();
 
-// Then use it before your routes are set up:
-app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
-// Set up a whitelist and check against it:
-var whitelist = ['https://anchor.fm/s/c383d4c/podcast/rss']
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
+app.get('/podcast', (req, res) => {
+  request(
+    { url: 'https://anchor.fm/s/c383d4c/podcast/rss' },
+    (error, response, body) => {
+      if (error || response.statusCode !== 200) {
+        return res.status(500).json({ type: 'error', message: err.message });
+      }
+
+      res.json(JSON.parse(body));
     }
-  }
-}
+  )
+});
 
-// Then pass them to cors:
-app.use(cors(corsOptions));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
