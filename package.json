@@ -2,6 +2,7 @@
   "name": "altgrind-site",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://anchor.fm/s/c383d4c/podcast/rss",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
