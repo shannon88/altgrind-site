@@ -27,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy":"https://anchor.fm/",
 
   "eslintConfig": {
     "extends": "react-app"
