@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     fontWeight: "700",
     lineHeight: "2rem",
     maxWidth: "90%",
-    marginBottom: "1rem"
+    marginBottom: "1.5rem"
 
   },
 
@@ -39,9 +39,6 @@ const useStyles = makeStyles({
 const styles = theme => ({
   toolbar: theme.mixins.toolbar
 });
-// const styles = (theme) => ({
-//   appBarSpacer: theme.mixins.toolbar
-// });
 
 const Home = props => {
   const styles = useStyles();
@@ -59,8 +56,8 @@ const Home = props => {
   >
     <div className={classes.toolbar} />
 
-            <Typography className={styles.tagline}>
-              Explore tech, build projects and learn to code with me.
+            <Typography className={styles.tagline} variant="h2">
+              Explore tech and learn to code with me.
               {/* Quit your day job and explore tech alternatives with me. */}
             </Typography>
             <Button

@@ -27,7 +27,7 @@
 }
 
 @media
-(max-width: 960px) {
+(max-width: 600px) {
     .about img {
         max-width: 50%;
     }

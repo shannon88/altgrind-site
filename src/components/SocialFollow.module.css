@@ -1,44 +1,50 @@
-    /* .container {
+/* .container {
       min-width: 800px;
     } */
-    
-    a.social {
-      margin: 0 1rem;
-      transition: transform 250ms;
-      display: inline-block;
-      /* do media query for spacing of these, maybe use materialUI grid */
-    }
-    
-    a.social:hover {
-      transform: translateY(-3px);
-    }
-    
 
-    a.youtube {
-      color: #eb3223;
-    }
-    
-    a.facebook {
-      color: #3b5998;
-    }
-  
-    a.linkedin {
-      color: #0e76a8;
-    }
-    
-    a.twitter {
-      color: #38A1F3;
-    }
-    
-    a.instagram {
-      color: black;
-    }
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+  white-space: nowrap;
 
-    a.github {
-      color: black;
-    }
+  /* do media query for spacing of these, maybe use materialUI grid */
+}
 
-    a.email {
-      color: black;
-    }
-    
+@media (max-width: 600px) {
+  a.social {
+    margin: 0 .5rem;
+  }
+}
+
+a.social:hover {
+  transform: translateY(-3px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #3b5998;
+}
+
+a.linkedin {
+  color: #0e76a8;
+}
+
+a.twitter {
+  color: #38a1f3;
+}
+
+a.instagram {
+  color: black;
+}
+
+a.github {
+  color: black;
+}
+
+a.email {
+  color: black;
+}

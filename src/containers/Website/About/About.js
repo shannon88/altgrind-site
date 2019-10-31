@@ -5,19 +5,27 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   hi: {
+    // lineHeight: "2rem",
     marginTop: "2rem",
-    lineHeight: "2.5rem",
     marginBottom: "1.5rem",
-    width: "75%"
-  }
+  },
+  intro: {
+    lineHeight: "2.25rem",
+    marginBottom: "1.5rem",
+    width: "75%",
+    textAlign: "center",
+  },
 });
 
 const About = () => {
   const classes = useStyles();
   return (
     <div className={styles.about}>
-      <Typography className={classes.hi} variant="h2" color="primary">
-        Hi, I'm Shannon O'Hehir. A New York City-based software developer, tech
+      <Typography className={classes.hi} variant="h1" color="primary">
+        Hello!
+      </Typography>
+      <Typography className={classes.intro} variant="h2" color="primary">
+     I'm Shannon O'Hehir. A New York City-based software developer, tech
         enthusiast and podcaster.
       </Typography>
       <img src={require("./images/about-me-new.jpg")} alt="Shannon" />

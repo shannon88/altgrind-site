@@ -10,15 +10,15 @@
     color: #26a69a;
     font-size: 2rem;
     max-width: 75%;
-    /* margin-top: 4rem; */
     margin-bottom: 2rem;
+    text-align: center;
 }
 
-.social {
+/* .social {
     display: inline-flex;
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
     justify-content: center;
     color: green;
-}
+} */
