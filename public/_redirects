@@ -1,3 +1,3 @@
-/podcast/*  https://anchor.fm/s/c383d4c/podcast/rss/:splat  200
+https://anchor.fm/s/c383d4c/podcast/rss  https://anchor.fm/s/c383d4c/podcast/rss/:splat  200
 
 /*  /index.html  200
