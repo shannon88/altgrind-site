@@ -30,8 +30,9 @@ class PodcastPage extends Component {
         ]
       }
     });
+  
     let channel = await parser.parseURL(
-      "https://anchor.fm/s/c383d4c/podcast/rss"
+      "https://cors-anywhere.herokuapp.com/https://anchor.fm/s/c383d4c/podcast/rss"
     );
     let channelResult = [];
     channel.items.forEach(item => {
