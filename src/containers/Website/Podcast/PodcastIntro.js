@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import CardMedia from "@material-ui/core/CardMedia";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
-import styles from './PodcastIntro.module.css'
+import styles from './PodcastIntro.module.css';
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
   heading: {
@@ -26,7 +27,7 @@ const PodcastIntro = () => {
   const classes = useStyles();
   return (
     <div className={styles.intro}>
-      <Typography variant="h1" className={classes.heading} color="primary">
+              <Typography variant="h1" className={classes.heading} color="primary">
         weekly episodes!
       </Typography>
       <Card className={classes.card}>
@@ -48,7 +49,7 @@ const PodcastIntro = () => {
         victories and self-deprecation.
       </p>
       <Subscribe />
-    </div>
+      </div>
   );
 };
 

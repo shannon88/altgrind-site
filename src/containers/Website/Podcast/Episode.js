@@ -15,8 +15,8 @@ const useStyles = makeStyles({
     maxWidth: 600,
     // width: 600, 
     marginBottom: '1rem',
-    marginLeft: '1rem',
-    marginRight: '1rem',
+    marginLeft: '2rem',
+    marginRight: '2rem',
   },
   epNum: {
     fontSize: '2.5rem',
@@ -126,14 +126,10 @@ const Episode = (props) => {
         {secToMin(props.duration)}
         </Typography>
         </Box>
-        {/* <Typography className={classes.pos} color="secondaryLight">
-         {props.audio}
-        </Typography> */}
         </Box>
   
       <CardActions>
         <IconButton className={classes.arrowButton}><Link to={{pathname: "/episode", state: {data: props}}}><ArrowForwardIosIcon color="secondary"/></Link></IconButton>
-        {/* get link to go to unique url for each episode then figure out how to get media player to work */}
       </CardActions>
     </Box>
     </Card>

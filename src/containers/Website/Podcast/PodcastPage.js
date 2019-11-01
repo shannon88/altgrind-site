@@ -58,24 +58,26 @@ class PodcastPage extends Component {
   render() {
     
     return (
-      <div>
+      <div className={styles.root}>
         <Grid
           container
           direction="row"
-          justify="flex-start"
-          alignContent="left"
-          alignItems="flex-start"
+          justify="center"
+          // alignContent="center"
+          // alignItems="flex-start"
           className={styles.grid}
         >
-          <Grid item md>
-            <Grid container align="center" justify="center">
+          <Grid item sm>
+            <Grid container align="center" justify="center" style={{ minWidth: "50%" }}>
               <PodcastIntro />
             </Grid>
           </Grid>
-          <Grid item md>
-            <Grid container align="center" justify="center">
-              <Grid item md>
+          <Grid item sm>
+            <Grid container direction="column" align="center" justify="center">
+              <Grid item minWidth>
                 <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+                </Grid>
+                <Grid item sm>
                 {this.state.episodes &&
                   this.state.episodes.map(tidbits => (
                     <div>
