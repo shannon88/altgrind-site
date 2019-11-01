@@ -20,7 +20,7 @@ class PodcastPage extends Component {
     //parser
     let Parser = require("rss-parser");
     let parser = new Parser({
-      headers: {"Access-Control-Allow-Origin": "https://anchor.fm"},
+      // headers: {"Access-Control-Allow-Origin": "https://anchor.fm"},
       customFields: {
         item: [
           ["itunes:episode", "episodeNum"],
@@ -30,7 +30,7 @@ class PodcastPage extends Component {
         ]
       }
     });
-  
+
     let channel = await parser.parseURL(
       "https://cors-anywhere.herokuapp.com/https://anchor.fm/s/c383d4c/podcast/rss"
     );
