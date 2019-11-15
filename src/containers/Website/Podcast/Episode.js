@@ -13,7 +13,9 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles({
   card: {
     maxWidth: 800,
+    // maxWidth: "90%",
     minWidth: 300,
+    height: "auto",
     marginBottom: "1rem",
     marginLeft: "2rem",
     marginRight: "2rem"
@@ -100,13 +102,12 @@ const Episode = props => {
 
   return (
     // <Card>{data.title}</Card>
-    <div>
       <Card className={classes.card}>
         <Box display="flex" justifyContent="space-between">
           <Box display="flex" direction="row">
           <Typography
               className={classes.epNum}
-              variant="h2"
+              // variant="h2"
               color="primary"
               justifyContent="center"
             >
@@ -163,9 +164,6 @@ const Episode = props => {
         </Box>
         </Box>
       </Card>
-
-        
-    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import Episode from "./Episode";
 import Grid from "@material-ui/core/Grid";
 import PodcastIntro from "./PodcastIntro";
 import styles from "./PodcastPage.module.css";
+import Box from "@material-ui/core/Box";
 
 class PodcastPage extends Component {
   constructor(props) {
@@ -76,9 +77,9 @@ class PodcastPage extends Component {
           </Grid>
         </Grid>
         <Grid item md={6}>
-          <Grid container align="center" justify="center">
+          {/* <Grid container align="center" justify="center"> */}
             <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-          </Grid>
+          {/* </Grid> */}
           {this.state.episodes &&
             this.state.episodes.map(tidbits => (
               <div>
@@ -93,8 +94,9 @@ class PodcastPage extends Component {
                 />
               </div>
             ))}
+          </Grid>
+
         </Grid>
-      </Grid>
     );
   }
 }
