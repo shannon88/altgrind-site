@@ -28,7 +28,7 @@ const styles = {
     // maxWidth:"80%"
     maxWidth: "450px",
     ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '350px'
+      width: '300px'
     },
   },
   summary: {
@@ -37,7 +37,7 @@ const styles = {
     textAlign: "left",
     marginBottom: "1rem",
     ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '350px'
+      width: '300px'
     },
   },
   iframe: {
@@ -49,7 +49,7 @@ const styles = {
     height: "auto",
     width: "450px",
     ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '350px'
+      width: '300px'
     },
   }
 };
@@ -122,6 +122,7 @@ class EpisodePage extends React.Component {
         alignItems="flex-start"
         className={classes.grid}
       >
+        <Grid item xs>
         <Typography className={classes.epNum} variant="h1" color="primary">
           Ep. {episodeNum}
         </Typography>
@@ -167,6 +168,7 @@ class EpisodePage extends React.Component {
           frameborder="0"
           scrolling="no"
         ></iframe>
+        </Grid>
       </Grid>
     );
   }
