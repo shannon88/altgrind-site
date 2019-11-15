@@ -56,47 +56,45 @@ class PodcastPage extends Component {
     this.props.history.push("/podcast");
   }
   render() {
-    
     return (
-      <div className={styles.root}>
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          // alignContent="center"
-          // alignItems="flex-start"
-          className={styles.grid}
-        >
-          <Grid item sm>
-            <Grid container align="center" justify="center" style={{ minWidth: "50%" }}>
-              <PodcastIntro />
-            </Grid>
-          </Grid>
-          <Grid item sm>
-            <Grid container direction="column" align="center" justify="center">
-              <Grid item minWidth>
-                <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-                </Grid>
-                <Grid item sm>
-                {this.state.episodes &&
-                  this.state.episodes.map(tidbits => (
-                    <div>
-                      <Episode
-                        key={tidbits.id}
-                        episodeNum={tidbits.episodeNum}
-                        title={tidbits.title}
-                        pubDate={tidbits.pubDate}
-                        duration={tidbits.duration}
-                        summary={tidbits.summary}
-                        audioLink={tidbits.audioLink}
-                      />
-                    </div>
-                  ))}
-              </Grid>
-            </Grid>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        // alignContent="center"
+        // alignItems="flex-start"
+        className={styles.grid}
+      >
+        <Grid item md={6}>
+          <Grid
+            container
+            align="center"
+            justify="center"
+            // style={{ minWidth: "50%" }}
+          >
+            <PodcastIntro />
           </Grid>
         </Grid>
-      </div>
+        <Grid item md={6}>
+          <Grid container align="center" justify="center">
+            <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+          </Grid>
+          {this.state.episodes &&
+            this.state.episodes.map(tidbits => (
+              <div>
+                <Episode
+                  key={tidbits.id}
+                  episodeNum={tidbits.episodeNum}
+                  title={tidbits.title}
+                  pubDate={tidbits.pubDate}
+                  duration={tidbits.duration}
+                  summary={tidbits.summary}
+                  audioLink={tidbits.audioLink}
+                />
+              </div>
+            ))}
+        </Grid>
+      </Grid>
     );
   }
 }

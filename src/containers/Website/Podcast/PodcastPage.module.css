@@ -1,5 +1,6 @@
 .grid {
     margin-top: 4rem;
+    flex-grow: 1;
 }
 
 .allEps {
@@ -7,5 +8,11 @@
     color: #37474f;
     font-size: .75rem;
     width: 100vh;
+    /* display: flex; */
+    /* flex-direction: row; */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
 
 }
