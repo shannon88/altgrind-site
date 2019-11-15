@@ -13,8 +13,8 @@ const styles = {
   grid: {
     height: "100vh",
     marginTop: "5rem",
-    // marginLeft: "1rem"
-    // justify: "center",
+    // marginLeft: "1rem",
+    // marginRight: "1rem"
   },
   epNum: {
     fontSize: "6rem",
@@ -25,13 +25,32 @@ const styles = {
   title: {
     // marginBottom: ".25rem"
     textAlign: "left",
-    maxWidth:"80%"
+    // maxWidth:"80%"
+    maxWidth: "450px",
+    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+      width: '350px'
+    },
   },
   summary: {
     marginTop: ".5rem",
     maxWidth: "450px",
     textAlign: "left",
-    marginBottom: "1rem"
+    marginBottom: "1rem",
+    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+      width: '350px'
+    },
+  },
+  iframe: {
+    // position: "relative",
+    // paddingBottom: "56.25%" /* 16:9 */,
+    // paddingTop: 25,
+    // height: 0
+    // margin: "2rem"
+    height: "auto",
+    width: "450px",
+    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
+      width: '350px'
+    },
   }
 };
 
@@ -95,70 +114,60 @@ class EpisodePage extends React.Component {
       audioLink
     } = this.props.location.state.data;
     return (
-      // <Grid
-      //   container
-      //   direction="row"
-      //   alignContent="center"
-      //   justify="center"
-      //   className={classes.grid}
-      // >
-        <Grid
-          container
-          direction="column"
-          justify="flex-start"
-          alignContent="center"
-          alignItems="flex-start"
-          className={classes.grid}
-        >
-          <Typography className={classes.epNum} variant="h1" color="primary">
-            Ep. {episodeNum}
-          </Typography>
-          <Typography className={classes.title} variant="h2" color="secondary">
-            {title}
-          </Typography>
-          <Box display="flex" justifyContent="flex-end">
-            <Box mr={10}>
-              <Typography
-                // className={classes.title}
-                display="inline"
-                variant="caption"
-                color="secondary"
-              >
-                {onlyDate(pubDate)}
-              </Typography>
-            </Box>
-            <Box ml={5}>
-              <Typography
-                // className={classes.title}
-                display="inline"
-                variant="caption"
-                color="secondary"
-              >
-                {secToMin(duration)}
-              </Typography>
-            </Box>
+      <Grid
+        container
+        direction="column"
+        justify="flex-start"
+        alignContent="center"
+        alignItems="flex-start"
+        className={classes.grid}
+      >
+        <Typography className={classes.epNum} variant="h1" color="primary">
+          Ep. {episodeNum}
+        </Typography>
+        <Typography className={classes.title} variant="h2" color="secondary">
+          {title}
+        </Typography>
+        <Box display="flex" justifyContent="flex-end">
+          <Box mr={10}>
+            <Typography
+              // className={classes.title}
+              display="inline"
+              variant="caption"
+              color="secondary"
+            >
+              {onlyDate(pubDate)}
+            </Typography>
           </Box>
+          <Box ml={5}>
+            <Typography
+              // className={classes.title}
+              display="inline"
+              variant="caption"
+              color="secondary"
+            >
+              {secToMin(duration)}
+            </Typography>
+          </Box>
+        </Box>
 
-          <Typography
-            className={classes.summary}
-            variant="body1"
-            color="secondary"
-          >
-            {stripHtmlTags(summary)}
-          </Typography>
-
-          <iframe
-            title="episode media"
-            src={insertStr(audioLink)}
-            // height="102px"
-            // width="400px"
-            height="auto"
-            width="450px"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
-        </Grid>
-      // </Grid>
+        <Typography
+          className={classes.summary}
+          variant="body1"
+          color="secondary"
+        >
+          {stripHtmlTags(summary)}
+        </Typography>
+        <iframe
+          className={classes.iframe}
+          title="episode media"
+          src={insertStr(audioLink)}
+          // height="auto"
+          // width="450px"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </Grid>
     );
   }
 }

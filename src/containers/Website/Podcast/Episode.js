@@ -7,13 +7,11 @@ import IconButton from "@material-ui/core/IconButton";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import Box from "@material-ui/core/Box";
 import { Link } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
-// import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles({
   card: {
     maxWidth: 800,
-    // maxWidth: "90%",
     minWidth: 300,
     height: "auto",
     marginBottom: "1rem",
@@ -58,7 +56,6 @@ const useStyles = makeStyles({
   }
 });
 
-// const Episode = ({ data }) => {
 const Episode = props => {
   //convert date/time to just date
   function onlyDate(pubDate) {
@@ -107,7 +104,6 @@ const Episode = props => {
           <Box display="flex" direction="row">
           <Typography
               className={classes.epNum}
-              // variant="h2"
               color="primary"
               justifyContent="center"
             >
