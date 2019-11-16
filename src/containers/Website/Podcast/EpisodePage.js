@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-// import styles from "./EpisodePage.module.css";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
@@ -13,8 +12,8 @@ const styles = {
   grid: {
     height: "100vh",
     marginTop: "5rem",
-    // marginLeft: "1rem",
-    // marginRight: "1rem"
+    // marginLeft: ".5rem",
+    // marginRight: ".5rem"
   },
   epNum: {
     fontSize: "6rem",
@@ -117,12 +116,13 @@ class EpisodePage extends React.Component {
       <Grid
         container
         direction="column"
-        // justify="flex-start"
+        justify="flex-start"
         alignContent="center"
-        // alignItems="flex-start"
+        alignItems="flex-start"
         className={classes.grid}
+        spacing={1}
       >
-        <Grid item xs>
+        <Grid item >
         <Typography className={classes.epNum} variant="h1" color="primary">
           Ep. {episodeNum}
         </Typography>
