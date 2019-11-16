@@ -11,7 +11,7 @@ import Box from "@material-ui/core/Box";
 const styles = {
   grid: {
     height: "100vh",
-    marginTop: "5rem",
+    marginTop: "5rem"
     // marginLeft: ".5rem",
     // marginRight: ".5rem"
   },
@@ -26,18 +26,20 @@ const styles = {
     textAlign: "left",
     // maxWidth:"80%"
     maxWidth: "450px",
-    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '300px'
-    },
+    ["@media (max-width:600px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "300px"
+    }
   },
   summary: {
     marginTop: ".5rem",
     maxWidth: "450px",
     textAlign: "left",
     marginBottom: "1rem",
-    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '300px'
-    },
+    ["@media (max-width:600px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "300px"
+    }
   },
   iframe: {
     // position: "relative",
@@ -47,9 +49,10 @@ const styles = {
     // margin: "2rem"
     height: "auto",
     width: "450px",
-    ['@media (max-width:600px)']: { // eslint-disable-line no-useless-computed-key
-      width: '300px'
-    },
+    ["@media (max-width:600px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      width: "300px"
+    }
   }
 };
 
@@ -116,58 +119,62 @@ class EpisodePage extends React.Component {
       <Grid
         container
         direction="column"
-        justify="flex-start"
         alignContent="center"
-        alignItems="flex-start"
         className={classes.grid}
         spacing={1}
       >
-        <Grid item >
-        <Typography className={classes.epNum} variant="h1" color="primary">
-          Ep. {episodeNum}
-        </Typography>
-        <Typography className={classes.title} variant="h2" color="secondary">
-          {title}
-        </Typography>
-        <Box display="flex" justifyContent="flex-end">
-          <Box mr={10}>
+        <Grid item xs>
+          <Grid justify="flex-start" alignItems="flex-start">
+            <Typography className={classes.epNum} variant="h1" color="primary">
+              Ep. {episodeNum}
+            </Typography>
             <Typography
-              // className={classes.title}
-              display="inline"
-              variant="caption"
+              className={classes.title}
+              variant="h2"
               color="secondary"
             >
-              {onlyDate(pubDate)}
+              {title}
             </Typography>
-          </Box>
-          <Box ml={5}>
-            <Typography
-              // className={classes.title}
-              display="inline"
-              variant="caption"
-              color="secondary"
-            >
-              {secToMin(duration)}
-            </Typography>
-          </Box>
-        </Box>
+            <Box display="flex" justifyContent="flex-end">
+              <Box mr={10}>
+                <Typography
+                  // className={classes.title}
+                  display="inline"
+                  variant="caption"
+                  color="secondary"
+                >
+                  {onlyDate(pubDate)}
+                </Typography>
+              </Box>
+              <Box ml={5}>
+                <Typography
+                  // className={classes.title}
+                  display="inline"
+                  variant="caption"
+                  color="secondary"
+                >
+                  {secToMin(duration)}
+                </Typography>
+              </Box>
+            </Box>
 
-        <Typography
-          className={classes.summary}
-          variant="body1"
-          color="secondary"
-        >
-          {stripHtmlTags(summary)}
-        </Typography>
-        <iframe
-          className={classes.iframe}
-          title="episode media"
-          src={insertStr(audioLink)}
-          // height="auto"
-          // width="450px"
-          frameborder="0"
-          scrolling="no"
-        ></iframe>
+            <Typography
+              className={classes.summary}
+              variant="body1"
+              color="secondary"
+            >
+              {stripHtmlTags(summary)}
+            </Typography>
+            <iframe
+              className={classes.iframe}
+              title="episode media"
+              src={insertStr(audioLink)}
+              // height="auto"
+              // width="450px"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </Grid>
         </Grid>
       </Grid>
     );
