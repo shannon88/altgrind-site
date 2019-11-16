@@ -117,9 +117,9 @@ class EpisodePage extends React.Component {
       <Grid
         container
         direction="column"
-        justify="flex-start"
+        // justify="flex-start"
         alignContent="center"
-        alignItems="flex-start"
+        // alignItems="flex-start"
         className={classes.grid}
       >
         <Grid item xs>
