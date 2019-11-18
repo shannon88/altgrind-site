@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     lineHeight: "2.25rem",
     marginBottom: "1.5rem",
     width: "75%",
-    textAlign: "center",
+    textAlign: "center"
   },
 });
 
