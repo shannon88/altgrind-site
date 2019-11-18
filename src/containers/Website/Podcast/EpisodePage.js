@@ -119,12 +119,13 @@ class EpisodePage extends React.Component {
       <Grid
         container
         direction="column"
-        alignContent="center"
+        // alignContent="flex-end"
+        alignItems="center"
+        // justify="flex-start"
+        // align="center"
         className={classes.grid}
-        spacing={1}
       >
         <Grid item xs>
-          <Grid justify="flex-start" alignItems="flex-start">
             <Typography className={classes.epNum} variant="h1" color="primary">
               Ep. {episodeNum}
             </Typography>
@@ -135,7 +136,7 @@ class EpisodePage extends React.Component {
             >
               {title}
             </Typography>
-            <Box display="flex" justifyContent="flex-end">
+            <Box display="flex" justifyContent="flex-start">
               <Box mr={10}>
                 <Typography
                   // className={classes.title}
@@ -176,7 +177,6 @@ class EpisodePage extends React.Component {
             ></iframe>
           </Grid>
         </Grid>
-      </Grid>
     );
   }
 }
