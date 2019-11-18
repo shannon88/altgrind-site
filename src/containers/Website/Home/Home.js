@@ -30,8 +30,8 @@ const useStyles = makeStyles({
     fontWeight: "700",
     lineHeight: "2rem",
     maxWidth: "90%",
-    marginBottom: "1.5rem"
-
+    marginBottom: "1.5rem",
+    marginTop: "12.5%"
   },
 
 });
@@ -47,12 +47,11 @@ const Home = props => {
     <div className={styles.containerImg}>
           <Grid
     container
-    align="center"
+    direction="column"
     alignItems="center"
     justify="center"
-    alignContent="center"
-    direction="column"
-    style={{ height: "100vh" }}
+    align="center"
+    // style={{ height: "100vh" }}
   >
     <div className={classes.toolbar} />
 
