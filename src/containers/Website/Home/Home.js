@@ -34,7 +34,7 @@ const useStyles = makeStyles({
     marginTop: "12.5%",
     ["@media (max-width:960px)"]: {
       // eslint-disable-line no-useless-computed-key
-      marginTop: "10rem"
+      marginTop: "8rem"
     }
   },
 
