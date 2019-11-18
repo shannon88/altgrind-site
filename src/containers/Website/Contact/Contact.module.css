@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     height: 100vh;
 }
 
@@ -12,6 +13,7 @@
     max-width: 75%;
     margin-bottom: 2rem;
     text-align: center;
+    margin-top: -10rem;
 }
 
 /* .social {

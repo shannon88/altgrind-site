@@ -30,20 +30,17 @@ const About = () => {
       </Typography>
       <img src={require("./images/about-me-new.jpg")} alt="Shannon" />
       <p>
-        I used to work a design job at a respectable firm in New York City. I
-        hustled to get work in the industry I went to college for and didn’t
-        question the standard 9-5 jobs most of us get after graduating. Day by
-        day, I started realizing just how structured and restricted my time had
-        become and frankly wasn’t happy about it. I started dreading Mondays,
-        counting down every hour at the office and ultimately decided it was
-        time for a change.
+      I used to work a design job at a respectable firm in New York City. 
+      I worked hard to become a designer and didn’t question traditional 9-5 
+      jobs until I started getting bored and frustrated at work. As the days 
+      dragged on, my daily tasks grew more monotonous. Since my workplace wouldn’t 
+      challenge me, I started challenging myself by learning to code in my freetime.
         <br />
         <br />
-        As a tech and coding enthusiast, I’m currently exploring alternatives to
-        standard white collar work. I began my tech journey by teaching myself
-        javascript, building this website and starting the altgrind podcast.
-        Give a listen and join me as I try to find work that’s actually worth
-        doing! Keep grinding.
+      As a tech and coding enthusiast, I’m currently exploring alternatives to standard 
+      white collar work. I began my tech journey by teaching myself javascript, building 
+      this website and starting the altgrind podcast. Give a listen and join me as I try 
+      to find work that’s actually worth doing! Keep grinding.
       </p>
     </div>
   );
