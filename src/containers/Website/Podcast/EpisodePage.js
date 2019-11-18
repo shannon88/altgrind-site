@@ -11,7 +11,7 @@ import Box from "@material-ui/core/Box";
 const styles = {
   grid: {
     height: "100vh",
-    marginTop: "5rem"
+    marginTop: "8rem"
     // marginLeft: ".5rem",
     // marginRight: ".5rem"
   },
@@ -119,10 +119,7 @@ class EpisodePage extends React.Component {
       <Grid
         container
         direction="column"
-        // alignContent="flex-end"
         alignItems="center"
-        // justify="flex-start"
-        // align="center"
         className={classes.grid}
       >
         <Grid item xs>
