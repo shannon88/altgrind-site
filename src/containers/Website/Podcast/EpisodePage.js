@@ -97,9 +97,8 @@ class EpisodePage extends React.Component {
 
     //convert seconds to minutes and add minute text string
     function secToMin(seconds) {
-      return Math.floor(seconds / 60) + " minutes";
+      return Math.floor(seconds / 60) + " min";
     }
-
     //strip HTML tags
     function stripHtmlTags(str) {
       if (str === null || str === "") return false;
