@@ -13,47 +13,52 @@ class PodcastPage extends Component {
     };
   }
 
-  async componentDidMount() {
-    /* This is where you type in code that will fetch the RSS feed
-        parse it it into a javascript object, then use setState() to 
-        set the podcasts state */
-    // run the parser function to get back an array of episodes
-    //parser
-    let Parser = require("rss-parser");
-    let parser = new Parser({
-      // headers: {"Access-Control-Allow-Origin": "https://anchor.fm"},
-      customFields: {
-        item: [
-          ["itunes:episode", "episodeNum"],
-          ["itunes:summary", "summary"],
-          "pubDate",
-          ["itunes:duration", "duration"]
-        ]
-      }
-    });
+  componentDidMount() {
+    // /* This is where you type in code that will fetch the RSS feed
+    //     parse it it into a javascript object, then use setState() to
+    //     set the podcasts state */
+    // // run the parser function to get back an array of episodes
+    // //parser
+    // let Parser = require("rss-parser");
+    // let parser = new Parser({
+    //   // headers: {"Access-Control-Allow-Origin": "https://anchor.fm"},
+    //   customFields: {
+    //     item: [
+    //       ["itunes:episode", "episodeNum"],
+    //       ["itunes:summary", "summary"],
+    //       "pubDate",
+    //       ["itunes:duration", "duration"]
+    //     ]
+    //   }
+    // });
 
-    let channel = await parser.parseURL(
-      "https://cors-anywhere.herokuapp.com/https://anchor.fm/s/c383d4c/podcast/rss"
-    );
-    let channelResult = [];
-    channel.items.forEach(item => {
-      let itemObj = {
-        id: item["guid"],
-        episodeNum: item["episodeNum"],
-        title: item["title"],
-        summary: item["summary"],
-        pubDate: item["pubDate"],
-        duration: item["duration"],
-        audioLink: item["link"]
-      };
-      channelResult.push(itemObj);
-    });
+    // let channel = await parser.parseURL(
+    //   "https://cors-anywhere.herokuapp.com/gihttps://anchor.fm/s/c383d4c/podcast/rss"
+    // );
+    // let channelResult = [];
+    // channel.items.forEach(item => {
+    //   let itemObj = {
+    //     id: item["guid"],
+    //     episodeNum: item["episodeNum"],
+    //     title: item["title"],
+    //     summary: item["summary"],
+    //     pubDate: item["pubDate"],
+    //     duration: item["duration"],
+    //     audioLink: item["link"]
+    //   };
+    //   channelResult.push(itemObj);
+    // });
     // console.log(channelResult);
-    let newEpisodes = channelResult;
+    fetch(".netlify/functions/api/rss")
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          episodes: data.feed
+        })
+      );
+    // let newEpisodes = channelResult;
     // console.log(newEpisodes);
-    this.setState({
-      episodes: newEpisodes
-    });
+
     this.props.history.push("/podcast");
   }
   render() {
@@ -78,7 +83,7 @@ class PodcastPage extends Component {
         </Grid>
         <Grid item md={6}>
           {/* <Grid container align="center" justify="center"> */}
-            <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+          <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
           {/* </Grid> */}
           {this.state.episodes &&
             this.state.episodes.map(tidbits => (
@@ -94,9 +99,8 @@ class PodcastPage extends Component {
                 />
               </div>
             ))}
-          </Grid>
-
         </Grid>
+      </Grid>
     );
   }
 }
