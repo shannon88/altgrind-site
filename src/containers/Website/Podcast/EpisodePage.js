@@ -99,12 +99,6 @@ class EpisodePage extends React.Component {
     function secToMin(seconds) {
       return Math.floor(seconds / 60) + " min";
     }
-    //strip HTML tags
-    function stripHtmlTags(str) {
-      if (str === null || str === "") return false;
-      else str = str.toString();
-      return str.replace(/<[^>]*>/g, "");
-    }
 
     const {
       title,
@@ -135,7 +129,6 @@ class EpisodePage extends React.Component {
             <Box display="flex" justifyContent="flex-start">
               <Box mr={10}>
                 <Typography
-                  // className={classes.title}
                   display="inline"
                   variant="caption"
                   color="secondary"
@@ -145,7 +138,6 @@ class EpisodePage extends React.Component {
               </Box>
               <Box ml={5}>
                 <Typography
-                  // className={classes.title}
                   display="inline"
                   variant="caption"
                   color="secondary"
@@ -160,7 +152,7 @@ class EpisodePage extends React.Component {
               variant="body1"
               color="secondary"
             >
-              {stripHtmlTags(summary)}
+              {summary}
             </Typography>
             <iframe
               className={classes.iframe}
@@ -182,5 +174,3 @@ EpisodePage.propTypes = {
 };
 
 export default withStyles(styles)(EpisodePage);
-
-// export default EpisodePage;

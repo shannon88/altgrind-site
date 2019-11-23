@@ -8,7 +8,6 @@ var Parser = require('rss-parser')
 var parser = new Parser()
 
 router.get('/api/rss', async (req, res) => {
-    debugger
     try {
         const feed = await parser.parseURL('https://anchor.fm/s/c383d4c/podcast/rss')
         res.send({ feed: feed })
@@ -17,6 +16,10 @@ router.get('/api/rss', async (req, res) => {
         res.send(err)
     }
 })
+
+
+
+
 
 // For testing the API sans netlify platform
 // app.listen("9000", () => console.log("Server running"))

@@ -29,7 +29,6 @@ class PodcastPage extends Component {
   render() {
     const { episodes } = this.state;
     return (
-      <div>
         <Grid
           container
           direction="row"
@@ -49,76 +48,25 @@ class PodcastPage extends Component {
             </Grid>
           </Grid>
           <Grid item md={6}>
-            {/* <Grid container align="center" justify="center"> */}
             <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-            {/* </Grid> */}
-          </Grid>
-        </Grid>
-        {/* <React.Fragment>
-                {episodes &&
-                    episodes.items.map(entry => (
-                        <p key={entry.id}>{entry.title}</p>
-                    ))}
-        </React.Fragment> */}
-        <React.Fragment>
+            <React.Fragment>
           {episodes &&
             episodes.items.map(tidbits => (
               <div>
                 <Episode
                   key={tidbits.id}
-                  episodeNum={tidbits.episodeNum}
+                  episodeNum={tidbits.itunes.episode}
                   title={tidbits.title}
                   pubDate={tidbits.pubDate}
-                  duration={tidbits.duration}
-                  summary={tidbits.summary}
-                  audioLink={tidbits.audioLink}
+                  duration={tidbits.itunes.duration}
+                  summary={tidbits.contentSnippet}
+                  audioLink={tidbits.link}
                 />
-                {console.log(tidbits.duration)}
               </div>
             ))}
         </React.Fragment>
-      </div>
-
-      // <Grid
-      //   container
-      //   direction="row"
-      //   justify="center"
-      //   // alignContent="center"
-      //   // alignItems="flex-start"
-      //   className={styles.grid}
-      // >
-      //   <Grid item md={6}>
-      //     <Grid
-      //       container
-      //       align="center"
-      //       justify="center"
-      //       // style={{ minWidth: "50%" }}
-      //     >
-      //       <PodcastIntro />
-      //     </Grid>
-      //   </Grid>
-      //   <Grid item md={6}>
-      //     {/* <Grid container align="center" justify="center"> */}
-      //     <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-      //     {/* </Grid> */}
-      //     <React.Fragment>
-      //     {episodes &&
-      //       episodes.items.map(tidbits => (
-      //         <div>
-      //           <Episode
-      //             key={tidbits.id}
-      //             episodeNum={tidbits.episodeNum}
-      //             title={tidbits.title}
-      //             pubDate={tidbits.pubDate}
-      //             duration={tidbits.duration}
-      //             summary={tidbits.summary}
-      //             audioLink={tidbits.audioLink}
-      //           />
-      //         </div>
-      //       ))}
-      //     </React.Fragment>
-      //   </Grid>
-      // </Grid>
+          </Grid>
+        </Grid>
     );
   }
 }

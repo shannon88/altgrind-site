@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Container from "@material-ui/core/Container";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -17,7 +15,6 @@ const useStyles = makeStyles({
       "url(" +
       require("./images/newyorkcity-skyline-small-edit-75opaque.jpg") +
       ")",
-    // width: "100%",
     backgroundSize: "cover",
     width: "auto",
     height: "100vh",
@@ -55,7 +52,6 @@ const Home = props => {
     alignItems="center"
     justify="center"
     align="center"
-    // style={{ height: "100vh" }}
   >
     <div className={classes.toolbar} />
 

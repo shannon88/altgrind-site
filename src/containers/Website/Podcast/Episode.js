@@ -88,13 +88,6 @@ const Episode = props => {
     return Math.floor(seconds / 60) + " min";
   }
 
-  //strip HTML tags
-  // function stripHtmlTags(str) {
-  //   if (str === null || str === "") return false;
-  //   else str = str.toString();
-  //   return str.replace(/<[^>]*>/g, "");
-  // }
-
   const classes = useStyles();
 
   return (
@@ -123,7 +116,6 @@ const Episode = props => {
                 variant="body1"
                 color="secondary"
               >
-                {/* {stripHtmlTags(props.summary)}  */}
                 {props.summary}
               </Typography>
           </Box>

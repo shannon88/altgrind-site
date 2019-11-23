@@ -38,10 +38,6 @@ const PodcastIntro = () => {
           title="altgrind album art"
         />
       </Card>
-      {/* <img
-        src={require("./images/altgrind-album.jpg")}
-        alt="altgrind album art"
-      /> */}
       <p className={styles.introP}>
         Explore tech side hustles with Shannon O’Hehir as she takes you on a
         journey from quitting her fancy design job in New York City to who knows
