@@ -1,4 +1,3 @@
-
 var express = require('express')
 var app = express()
 
@@ -9,10 +8,10 @@ var Parser = require('rss-parser')
 var parser = new Parser()
 
 router.get('/api/rss', async (req, res) => {
+    debugger
     try {
         const feed = await parser.parseURL('https://anchor.fm/s/c383d4c/podcast/rss')
-        console.log(feed)
-        res.send({ feed: feed.items })
+        res.send({ feed: feed })
     } catch (err) {
         res.status(500)
         res.send(err)

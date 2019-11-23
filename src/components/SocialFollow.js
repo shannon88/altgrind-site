@@ -48,7 +48,7 @@ export default function SocialFollow() {
         <FontAwesomeIcon icon={faFacebook} size="2x" />
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="mailto:alternategrind@gmail.com" 
+      <a target="_blank" rel="noopener noreferrer" href="mailto:shannon@altgrind.com" 
       className={[styles.email, styles.social].join(" ")}>
         <FontAwesomeIcon icon={faEnvelope} size="2x" />
       </a>

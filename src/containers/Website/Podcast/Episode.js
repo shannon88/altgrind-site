@@ -89,11 +89,11 @@ const Episode = props => {
   }
 
   //strip HTML tags
-  function stripHtmlTags(str) {
-    if (str === null || str === "") return false;
-    else str = str.toString();
-    return str.replace(/<[^>]*>/g, "");
-  }
+  // function stripHtmlTags(str) {
+  //   if (str === null || str === "") return false;
+  //   else str = str.toString();
+  //   return str.replace(/<[^>]*>/g, "");
+  // }
 
   const classes = useStyles();
 
@@ -123,7 +123,8 @@ const Episode = props => {
                 variant="body1"
                 color="secondary"
               >
-                {stripHtmlTags(props.summary)}
+                {/* {stripHtmlTags(props.summary)}  */}
+                {props.summary}
               </Typography>
           </Box>
             

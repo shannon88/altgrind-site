@@ -6,87 +6,63 @@ import styles from "./PodcastPage.module.css";
 import Box from "@material-ui/core/Box";
 
 class PodcastPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      episodes: []
-    };
-  }
-
+  state = {
+    episodes: null
+  };
   componentDidMount() {
-    // /* This is where you type in code that will fetch the RSS feed
-    //     parse it it into a javascript object, then use setState() to
-    //     set the podcasts state */
-    // // run the parser function to get back an array of episodes
-    // //parser
-    // let Parser = require("rss-parser");
-    // let parser = new Parser({
-    //   // headers: {"Access-Control-Allow-Origin": "https://anchor.fm"},
-    //   customFields: {
-    //     item: [
-    //       ["itunes:episode", "episodeNum"],
-    //       ["itunes:summary", "summary"],
-    //       "pubDate",
-    //       ["itunes:duration", "duration"]
-    //     ]
-    //   }
-    // });
-
-    // let channel = await parser.parseURL(
-    //   "https://cors-anywhere.herokuapp.com/gihttps://anchor.fm/s/c383d4c/podcast/rss"
-    // );
-    // let channelResult = [];
-    // channel.items.forEach(item => {
-    //   let itemObj = {
-    //     id: item["guid"],
-    //     episodeNum: item["episodeNum"],
-    //     title: item["title"],
-    //     summary: item["summary"],
-    //     pubDate: item["pubDate"],
-    //     duration: item["duration"],
-    //     audioLink: item["link"]
-    //   };
-    //   channelResult.push(itemObj);
-    // });
-    // console.log(channelResult);
-    fetch(".netlify/functions/api/rss")
-      .then(response => response.json())
+    fetch("/.netlify/functions/server/api/rss")
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
       .then(data =>
         this.setState({
           episodes: data.feed
         })
-      );
-    // let newEpisodes = channelResult;
-    // console.log(newEpisodes);
-
-    this.props.history.push("/podcast");
+      )
+      .catch(err => alert(err));
   }
+
   render() {
+    const { episodes } = this.state;
     return (
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        // alignContent="center"
-        // alignItems="flex-start"
-        className={styles.grid}
-      >
-        <Grid item md={6}>
-          <Grid
-            container
-            align="center"
-            justify="center"
-            // style={{ minWidth: "50%" }}
-          >
-            <PodcastIntro />
+      <div>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          // alignContent="center"
+          // alignItems="flex-start"
+          className={styles.grid}
+        >
+          <Grid item md={6}>
+            <Grid
+              container
+              align="center"
+              justify="center"
+              // style={{ minWidth: "50%" }}
+            >
+              <PodcastIntro />
+            </Grid>
+          </Grid>
+          <Grid item md={6}>
+            {/* <Grid container align="center" justify="center"> */}
+            <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+            {/* </Grid> */}
           </Grid>
         </Grid>
-        <Grid item md={6}>
-          {/* <Grid container align="center" justify="center"> */}
-          <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
-          {/* </Grid> */}
-          {this.state.episodes &&
-            this.state.episodes.map(tidbits => (
+        {/* <React.Fragment>
+                {episodes &&
+                    episodes.items.map(entry => (
+                        <p key={entry.id}>{entry.title}</p>
+                    ))}
+        </React.Fragment> */}
+        <React.Fragment>
+          {episodes &&
+            episodes.items.map(tidbits => (
               <div>
                 <Episode
                   key={tidbits.id}
@@ -97,10 +73,52 @@ class PodcastPage extends Component {
                   summary={tidbits.summary}
                   audioLink={tidbits.audioLink}
                 />
+                {console.log(tidbits.duration)}
               </div>
             ))}
-        </Grid>
-      </Grid>
+        </React.Fragment>
+      </div>
+
+      // <Grid
+      //   container
+      //   direction="row"
+      //   justify="center"
+      //   // alignContent="center"
+      //   // alignItems="flex-start"
+      //   className={styles.grid}
+      // >
+      //   <Grid item md={6}>
+      //     <Grid
+      //       container
+      //       align="center"
+      //       justify="center"
+      //       // style={{ minWidth: "50%" }}
+      //     >
+      //       <PodcastIntro />
+      //     </Grid>
+      //   </Grid>
+      //   <Grid item md={6}>
+      //     {/* <Grid container align="center" justify="center"> */}
+      //     <p className={styles.allEps}>ALL ALTGRIND EPISODES</p>
+      //     {/* </Grid> */}
+      //     <React.Fragment>
+      //     {episodes &&
+      //       episodes.items.map(tidbits => (
+      //         <div>
+      //           <Episode
+      //             key={tidbits.id}
+      //             episodeNum={tidbits.episodeNum}
+      //             title={tidbits.title}
+      //             pubDate={tidbits.pubDate}
+      //             duration={tidbits.duration}
+      //             summary={tidbits.summary}
+      //             audioLink={tidbits.audioLink}
+      //           />
+      //         </div>
+      //       ))}
+      //     </React.Fragment>
+      //   </Grid>
+      // </Grid>
     );
   }
 }
